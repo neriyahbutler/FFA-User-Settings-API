@@ -13,9 +13,9 @@ namespace Application.Interface
         public Task<UserSettingsAPIModel> InsertUserSettings(UserSettingsAPIModel userSettings);
         public Task<UserSettingsAPIModel> UpdateUserSettings(string username, UserSettingsAPIModel userSettings);
 
-        public Task<UserSettingsCharacterMovesAPIModel> GetCharacterMoves(string username, string characterName = "", string moveType = "");
-        public Task<UserSettingsCharacterMovesAPIModel> InsertCharacterMoves(string username, string characterName);
-        public Task<UserSettingsCharacterMovesAPIModel> UpdateCharacterMoves(string username, string characterName);
-        public Task<UserSettingsCharacterMovesAPIModel> InitializeCharacterMovesSettings();
+        public Task<UserSettingsCharacterMovesAPIModel> GetCharacterMoves(string username, string? characterName = "", string? moveType = "");
+        public Task<UserSettingsCharacterMovesAPIModel> InsertCharacterMoves(string username, string characterName, UserSettingsCharacterMovesAPIModel userSettingsCharacterMove);
+        public Task<UserSettingsCharacterMovesAPIModel> UpdateCharacterMoves(string username, string characterName, UserSettingsCharacterMovesAPIModel userSettingsCharacterMove);
+        public Task<UserSettingsCharacterMovesAPIModel> InitializeCharacterMovesSettings(UserSettingsCharacterMovesAPIModel userSettingsCharacterMove);
     }
 }
